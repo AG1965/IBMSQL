@@ -37,5 +37,12 @@ git clone https://github.com/AG1965/IBMSQL
 * Compile the source files in QRPGLESRC
 
 ```bash
-BUILDIB=libraryname make
+BUILDLIB=libraryname make
 ```
+
+You can easily check which objects haven't been created by running make again with switch -n to do nothing. 
+
+```bash
+BUILDLIB=libraryname make -n
+```
+
