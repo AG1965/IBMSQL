@@ -23,3 +23,19 @@ The funny thing is that most of the fixed form SQLRPGLE compiles OK, while the *
 | fail | IBMSQLXFQ  | fixed      |  LIKE subfield of     QUALIFIED external described file                       |
 | fail | IBMSQLXFQT | fixed      |  LIKE subfield of     QUALIFIED external described file TEMPLATE              |
 | fail | IBMSQLXFT  | fixed      |  LIKE subfield of not QUALIFIED external described file TEMPLATE              |
+
+## install and run the compile
+
+1. Clone this repository
+
+```bash
+git clone https://github.com/AG1965/IBMSQL
+```
+
+1. Create a library with the name of your choice
+
+1. Compile the source files in QRPGLESRC
+
+```bash
+BUILDIB=libraryname make
+```
