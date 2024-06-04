@@ -1,0 +1,25 @@
+**FREE
+Ctl-Opt DFTACTGRP(*NO);
+
+Dcl-F SYSDUMMY1_T USROPN EXTDESC('SYSIBM/SYSDUMMY1') TEMPLATE 
+      RENAME(SYSDUMMY1:SYSDUMMY1F);
+
+Dcl-DS myResultSet  QUALIFIED;
+   IBMrequired               LIKE(IBMREQD);
+End-DS;
+
+IF 'never' = 'do that';
+   OPEN SYSDUMMY1;
+ENDIF;
+
+EXEC SQL   DECLARE C1 CURSOR FOR
+                  SELECT IBMREQD
+                    FROM SYSIBM/SYSDUMMY1;
+
+EXEC SQL   OPEN  C1;
+
+EXEC SQL   FETCH C1 INTO :myResultSet;
+
+EXEC SQL   CLOSE C1;
+
+*INLR = *ON;
