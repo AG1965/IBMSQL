@@ -26,15 +26,15 @@ The funny thing is that most of the fixed form SQLRPGLE compiles OK, while the *
 
 ## install and run the compile
 
-1. Clone this repository
+* Clone this repository
 
 ```bash
 git clone https://github.com/AG1965/IBMSQL
 ```
 
-1. Create a library with the name of your choice
+* Create a library with the name of your choice
 
-1. Compile the source files in QRPGLESRC
+* Compile the source files in QRPGLESRC
 
 ```bash
 BUILDIB=libraryname make
